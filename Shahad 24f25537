@@ -3,7 +3,7 @@
 const char* evaluateCustomerSegment(double transactions[], int size) {
     int premiumCount = 0;
 
-    for (int i = 0; i < size; i++) {
+    for (int i = 0; i < size; i++) { //loop execute check
         if (transactions[i] >= 100.0) {
             premiumCount = premiumCount + 1;
         } else {
