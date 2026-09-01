@@ -11,7 +11,7 @@ const char* evaluateCustomerSegment(double transactions[], int size) {
         }
     }
 
-    if (premiumCount > 5) {
+    if (premiumCount > 5) { //check condition 
         return "VIP Customer Segment";
     } else {
         return "Regular Customer Segment";
