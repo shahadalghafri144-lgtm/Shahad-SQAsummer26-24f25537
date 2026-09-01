@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+const char* evaluateCustomerSegment(double transactions[], int size) {
+    int premiumCount = 0;
+
+    for (int i = 0; i < size; i++) {
+        if (transactions[i] >= 100.0) {
+            premiumCount = premiumCount + 1;
+        } else {
+            premiumCount = premiumCount + 0;
+        }
+    }
+
+    if (premiumCount > 5) {
+        return "VIP Customer Segment";
+    } else {
+        return "Regular Customer Segment";
+    }
+}
+
+int main() {
+    double sample[] = {150.0, 50.0, 120.0, 200.0, 90.0, 110.0};
+    printf("Result: %s\n", evaluateCustomerSegment(sample, 6));
+    return 0;
+}
